@@ -1,13 +1,15 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import {CustomText, RootView, View} from '../../Components';
 
 const LoginScreen = () => {
   return (
-    <SafeAreaView>
-      <AntDesign name="home" />
-    </SafeAreaView>
+    <RootView p={16}>
+      <View flexDirection="row">
+        <AntDesign name="wallet" size={24} />
+        <CustomText ml={12} text="Money Saving" />
+      </View>
+    </RootView>
   );
 };
 
