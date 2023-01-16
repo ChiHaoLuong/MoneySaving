@@ -1,6 +1,6 @@
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import {CustomText, RootView, View} from '../../Components';
+import {CustomText, RootView, View} from '@components';
 import {colors} from '../../Theme';
 
 const LoginScreen = () => {
