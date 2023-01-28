@@ -23,7 +23,7 @@ interface ImageComponentProps {
   resizeModeUri?: ResizeMode;
 }
 
-export const Image = (props: ImageComponentProps) => {
+export const CustomImage = (props: ImageComponentProps) => {
   const {imgPath, imgUri, style, height, width, ...imgProps} = props;
 
   const [urlError, setUrlError] = useState<boolean>(false);

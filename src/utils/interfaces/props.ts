@@ -1,19 +1,19 @@
 import {ViewStyle, StyleProp, FlexAlignType, ColorValue} from 'react-native';
 export interface CustomSpacingProps {
-  mt?: number;
-  mb?: number;
-  mv?: number;
-  ml?: number;
-  mr?: number;
-  mh?: number;
-  pt?: number;
-  pb?: number;
-  ph?: number;
-  pv?: number;
-  pl?: number;
-  pr?: number;
-  m?: number;
-  p?: number;
+  mt?: number | string;
+  mb?: number | string;
+  mv?: number | string;
+  ml?: number | string;
+  mr?: number | string;
+  mh?: number | string;
+  pt?: number | string;
+  pb?: number | string;
+  ph?: number | string;
+  pv?: number | string;
+  pl?: number | string;
+  pr?: number | string;
+  m?: number | string;
+  p?: number | string;
   width?: string | number;
   height?: string | number;
   justifyContent?:

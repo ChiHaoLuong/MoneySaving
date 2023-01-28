@@ -1,3 +1,4 @@
 export type UnAuthParamList = {
-  Login: undefined;
+  Main: undefined;
+  Auth: undefined;
 };
