@@ -4,7 +4,7 @@ import {
   NativeSyntheticEvent,
   ViewStyle,
 } from 'react-native';
-import React from 'react';
+import React, {useRef} from 'react';
 import {StyleProp} from 'react-native';
 import {View, CustomText, CustomImage} from '@components';
 import {ISliderLoginData, SLIDER_LOGIN_DATA} from 'utils/data';
@@ -19,6 +19,8 @@ interface SliderProps {
 
 export const Slider = (props: SliderProps) => {
   const {containerStyle, setSliderIndex, sliderIndex} = props;
+
+  const listRef = useRef<FlatList>(null);
 
   const onScrollHandle = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
     const slider = Math.ceil(
@@ -68,6 +70,7 @@ export const Slider = (props: SliderProps) => {
         keyExtractor={i => i.id + ''}
         renderItem={renderItemSlider}
         onScroll={onScrollHandle}
+        ref={listRef}
       />
     </View>
   );

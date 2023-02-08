@@ -2,11 +2,17 @@ import React, {useState} from 'react';
 import {CustomButton, RootView, View} from '@components';
 import {Header, Slider} from './components';
 import styles from './styles';
-import {ISliderLoginData, SLIDER_LOGIN_DATA} from 'utils/data';
+import {ISliderLoginData, SLIDER_LOGIN_DATA} from 'utils';
 import {colors} from 'Theme';
+import {EnumScreenType, MainScreenProps} from 'Navigations/screenType';
 
-const MainScreen = () => {
+const MainScreen = ({navigation}: MainScreenProps) => {
   const [sliderIndex, setSliderIndex] = useState<number>(0);
+
+  const onAuthScreenNavigating = (screenType: EnumScreenType) =>
+    navigation.navigate('Auth', {
+      screenType,
+    });
 
   const _renderSliderIndex = (e: ISliderLoginData, i: number): JSX.Element => {
     const isCurrent = i === sliderIndex ? true : false;
@@ -40,6 +46,7 @@ const MainScreen = () => {
         borRad={24}
         titleColor={colors.white[500]}
         pv={16}
+        onPress={() => onAuthScreenNavigating(EnumScreenType.REGISTER)}
       />
       <CustomButton
         title="ĐĂNG NHẬP"
@@ -49,6 +56,7 @@ const MainScreen = () => {
         titleColor={colors.green}
         pv={16}
         mt={12}
+        onPress={() => onAuthScreenNavigating(EnumScreenType.LOGIN)}
       />
     </RootView>
   );
