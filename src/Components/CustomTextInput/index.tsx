@@ -107,7 +107,7 @@ export const CustomTextInput = (props: ICustomTextInput) => {
         )}
         {iconRight}
       </View>
-      {error ? <CustomText text={error} color={'red'} /> : null}
+      {error ? <CustomText mt={4} text={error} color={'red'} /> : null}
     </>
   );
 };

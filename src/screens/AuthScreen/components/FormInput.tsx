@@ -24,9 +24,9 @@ const initialValues: FormInputValue = {
 const authSchema = Yub.object().shape({
   email: Yub.string()
     .email('Vui lòng nhập đúng định dạng Email')
-    .required('Vui lòng điền đủ thông tin'),
+    .required('Vui lòng nhập đủ thông tin'),
   password: Yub.string()
-    .required('Vui lòng điền đầy đủ thông tin')
+    .required('Vui lòng nhập đủ thông tin')
     .min(8, 'Mật khẩu phải có ít nhất 8 ký tự'),
 });
 
