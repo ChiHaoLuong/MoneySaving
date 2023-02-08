@@ -6,6 +6,7 @@ import {
   TextStyle,
   NativeSyntheticEvent,
   TextInputFocusEventData,
+  Platform,
 } from 'react-native';
 import React, {useMemo, useState} from 'react';
 import {CustomText, View} from '../';
@@ -74,7 +75,7 @@ export const CustomTextInput = (props: ICustomTextInput) => {
         flexDirection="row"
         justifyContent="center"
         pt={8}
-        pb={4}
+        pb={Platform.OS === 'ios' ? 4 : 0}
         borBW={1}
         borBColor={borderBottomColor}
         alignItems="center"

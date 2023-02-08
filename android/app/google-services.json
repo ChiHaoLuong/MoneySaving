@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "391208700085",
+    "project_id": "moneysaving-ee539",
+    "storage_bucket": "moneysaving-ee539.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391208700085:android:35cdc18e51cda2ebf756fc",
+        "android_client_info": {
+          "package_name": "com.moneysaving"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391208700085-rlu9i64e6u4r0bptj487prgrt6ugv4fa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moneysaving",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "391208700085-g3920gna4r4j0ipfj5933jk5cot0va3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_Fy58PY4jJMP7iee173O3SY935Tf2Jp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391208700085-g3920gna4r4j0ipfj5933jk5cot0va3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

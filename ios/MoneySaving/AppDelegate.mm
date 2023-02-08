@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import <Firebase.h>
 
 #import <React/RCTBundleURLProvider.h>
 
@@ -6,6 +7,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+   if ([FIRApp defaultApp] == nil) { [FIRApp configure]; }
   self.moduleName = @"MoneySaving";
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
