@@ -1,9 +1,9 @@
 import {
+  ColorValue,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
   StyleProp,
-  StyleSheet,
   ViewStyle,
 } from 'react-native';
 import React from 'react';
@@ -18,16 +18,21 @@ interface RootViewProps extends CustomSpacingProps {
   isScroll?: boolean;
   style?: StyleProp<ViewStyle>;
   children?: JSX.Element | JSX.Element[] | React.ReactNode | React.ReactNode[];
+  backgroundColor?: ColorValue;
 }
 
 export const RootView = (props: RootViewProps) => {
-  const {isScroll, style, ...customSpacingProps} = props;
+  const {isScroll, style, backgroundColor, ...customSpacingProps} = props;
 
   const customSpacingStyles = getCustomSpacingStyles({...customSpacingProps});
+  const rootStyles: StyleProp<ViewStyle> = {
+    backgroundColor: backgroundColor || colors.white[500],
+    flex: 1,
+  };
 
   if (isScroll) {
     return (
-      <SafeAreaView style={[styles.root, customSpacingStyles, style]}>
+      <SafeAreaView style={[rootStyles, customSpacingStyles, style]}>
         <KeyboardAvoidingView
           behavior="padding"
           keyboardVerticalOffset={Platform.OS === 'android' ? -500 : 0}>
@@ -38,7 +43,7 @@ export const RootView = (props: RootViewProps) => {
   }
 
   return (
-    <SafeAreaView style={[styles.root, customSpacingStyles, style]}>
+    <SafeAreaView style={[rootStyles, customSpacingStyles, style]}>
       <KeyboardAvoidingView
         behavior="padding"
         keyboardVerticalOffset={Platform.OS === 'android' ? -500 : 0}>
@@ -47,10 +52,3 @@ export const RootView = (props: RootViewProps) => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  root: {
-    flex: 1,
-    backgroundColor: colors.white[500],
-  },
-});

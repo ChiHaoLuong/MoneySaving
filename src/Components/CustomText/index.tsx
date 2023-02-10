@@ -39,7 +39,7 @@ export const CustomText = (props: TextComponentProps) => {
   const customSpacingStyle = getCustomSpacingStyles({...customSpacingProps});
 
   const defaultStyle: StyleProp<TextStyle>[] = [
-    color ? {color: color} : {color: colors.black[500]},
+    {color: color || colors.black[500]},
     size ? {fontSize: size} : {},
     fontWeight ? {fontWeight} : {},
     lineHeight ? {lineHeight} : {},

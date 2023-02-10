@@ -36,4 +36,5 @@ export default {
     900: '#646464',
   },
   green: '#2cb84b',
+  backgroundGray: '#F5F5F5',
 };
